@@ -1,0 +1,153 @@
+/* 1. Global Reset & Variables */
+:root {
+  --primary: #ea580c;
+  /* Orange-600 */
+  --primary-glow: rgba(234, 88, 12, 0.15);
+  --bg-color: #ffffff;
+  --bg-soft: #f8f9fa;
+  --text-main: #0a0a0a;
+  /* Deep Black for Typography */
+  --text-muted: #6b7280;
+  /* Gray-500 */
+  --border-light: rgba(0, 0, 0, 0.05);
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* 2. Selection & Scrollbar (Magazine Feel) */
+::selection {
+  background-color: var(--primary);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* 3. Global Typography Fixes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  /* Tight tracking for bold look */
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+/* 4. Component Specific Utilities */
+
+/* Smooth Category Pill Transitions */
+.category-pill {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Search Input Focus Glow */
+input:focus {
+  box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+/* Image Hover Zoom (Global) */
+.img-zoom-container {
+  overflow: hidden;
+  border-radius: 2.5rem;
+}
+
+.img-zoom-container img {
+  transition: transform 0.8s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.img-zoom-container:hover img {
+  transform: scale(1.05);
+}
+
+/* 5. Content Layout Fixes */
+.prose-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.prose-content p {
+  margin-bottom: 1.8rem;
+  font-size: 1.25rem;
+  color: #374151;
+  line-height: 1.8;
+}
+
+/* 6. Mobile Optimizations */
+@media (max-width: 768px) {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+/* 7. Keyframe Animations */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    clip-path: inset(10% 0 10% 0);
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0% 0 0% 0);
+    transform: translateY(0);
+  }
+}
+
+.reveal-effect {
+  animation: reveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* 8. Glassmorphism for Header/Cards */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+}

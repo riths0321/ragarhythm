@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Classic High-Contrast Palette */
+        --primary: 20 100% 50%;
+        /* Pure Orange */
+        --foreground: 0 0% 0%;
+        /* Solid Black */
+        --background: 0 0% 100%;
+        /* Paper White */
+        --soft-gray: 0 0% 98%;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        /* Plus Jakarta Sans looks killer for magazines */
+        font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+        @apply text-gray-900 bg-white selection:bg-orange-50 selection:text-orange-600;
+        line-height: 1.6;
+    }
+
+    /* Premium Headlines: Extreme tight tracking */
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-heading {
+        @apply tracking-tighter font-black uppercase;
+        letter-spacing: -0.05em;
+    }
+}
+
+@layer components {
+
+    /* 1. The Search Input Fix */
+    .search-input {
+        @apply w-full bg-gray-50 border-2 border-transparent py-5 pl-14 pr-8 rounded-[2rem] text-sm font-bold tracking-widest uppercase transition-all duration-300 focus:bg-white focus:border-orange-500/20 focus:ring-4 focus:ring-orange-500/5 outline-none;
+    }
+
+    /* 2. Modern Category Pill */
+    .category-pill {
+        @apply px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 whitespace-nowrap border-2;
+    }
+
+    .category-pill-active {
+        @apply bg-gray-900 border-gray-900 text-white shadow-lg shadow-gray-200;
+    }
+
+    .category-pill-inactive {
+        @apply bg-white border-gray-100 text-gray-400 hover:border-orange-500 hover:text-orange-600;
+    }
+
+    /* 3. Classic Modern Button */
+    .btn-classic {
+        @apply px-8 py-4 bg-black text-white rounded-2xl font-bold uppercase tracking-widest text-[10px] transition-all duration-500 hover:bg-orange-600 hover:-translate-y-1 active:scale-95 shadow-xl shadow-gray-200/50 hover:shadow-orange-200/50;
+    }
+
+    /* 4. Elegant Glass Header */
+    .glass-header {
+        @apply bg-white/80 backdrop-blur-xl sticky top-0 z-[100] border-b border-gray-100;
+    }
+}
+
+@layer utilities {
+
+    /* Subtle Grain Texture (Optional for that vintage feel) */
+    .bg-grain {
+        background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    }
+
+    /* Animation Delay Utilities */
+    .delay-100 {
+        animation-delay: 100ms;
+    }
+
+    .delay-200 {
+        animation-delay: 200ms;
+    }
+
+    .delay-300 {
+        animation-delay: 300ms;
+    }
+}
+
+/* Page Entrance Animation */
+.animate-slide-up {
+    opacity: 0;
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Custom Scrollbar for Magazine Style */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-white;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-200 rounded-full hover:bg-orange-600 transition-colors;
+}
