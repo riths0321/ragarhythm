@@ -7,7 +7,6 @@ import { MOCK_BLOGS } from "../data/mockBlogs";
 import { motion } from "framer-motion";
 
 const categoryInfo = {
-
     All: {
         icon: "🌍",
         accent: "from-gray-900 to-gray-600",
@@ -37,6 +36,18 @@ const categoryInfo = {
         accent: "from-green-600 to-green-400",
         image: "https://images.pexels.com/photos/7714048/pexels-photo-7714048.jpeg?q=80&w=2000",
         description: "Where East meets West—breaking genre boundaries to create something new.",
+    },
+    Electronic: {
+        icon: "🎹",
+        accent: "from-cyan-500 to-blue-600",
+        image: "https://images.pexels.com/photos/2381596/pexels-photo-2381596.jpeg?q=80&w=2000",
+        description: "Synthesized soundscapes and pulsating beats that push the future of Indian music.",
+    },
+    Global: {
+        icon: "🌐",
+        accent: "from-red-600 to-rose-400",
+        image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2000",
+        description: "How Indian sounds are resonating across borders and influencing global charts.",
     },
 };
 

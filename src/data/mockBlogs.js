@@ -72,15 +72,16 @@ The marriage of Raag Yaman and lo-fi music represents more than just a trend - i
         likes: 134,
         featured: true,
         tags: ['Tabla', 'Trap', 'Rhythm', 'Percussion', 'Production'],
-        content: `
+        content:
+`
 The rhythmic complexity of Indian classical music has captivated musicians worldwide. But few modern genres showcase this influence as boldly as trap music, where intricate tabla patterns are finding new life in hi-hat rolls and 808 programming.
 
 ## The Foundation: Understanding Taals
 
 Indian classical music uses time cycles called Taals - sophisticated rhythmic frameworks that can range from 6 to 16 beats or more. The most common ones include:
-- **Teental** (16 beats) - The most popular taal
-- **Jhaptaal** (10 beats) - Complex and asymmetric
-- **Rupak** (7 beats) - Unusual and challenging
+**Teental** (16 beats) - The most popular taal
+**Jhaptaal** (10 beats) - Complex and asymmetric
+**Rupak** (7 beats) - Unusual and challenging
 
 ## The Trap Connection
 
@@ -643,89 +644,89 @@ Start simple: pick one raag, learn its scale, program it into your system. Then 
         featured: false,
         tags: ['Indie', 'Soul', 'R&B', 'Vernacular', 'Independent Music'],
         content: `
-    Something beautiful is happening in India's indie music scene. Young artists are taking the smooth, emotive sounds of R&B and soul and singing in Hindi, Tamil, Bengali, and Punjabi—creating a vernacular indie soul movement that feels deeply personal and authentic.
-    
-    ## Breaking the English Barrier
-    
-    For years, Indian indie artists felt they needed to sing in English to be taken seriously. R&B and soul, rooted in African-American culture, seemed to demand English lyrics.
-    
-    Then came the shift.
-    
-    Artists realized that the emotional core of soul music—vulnerability, longing, celebration—translates powerfully into any language. Singing in one’s mother tongue often makes it even more expressive.
-    
-    ## Pioneers of the Movement
-    
-    ### Lifafa (Suryakant Sawhney)
-    
-    Lifafa’s use of Hindi over neo-soul production was groundbreaking. Tracks like "Nikamma" proved that Hindi could sound just as smooth over Rhodes keys and 808s.
-    
-    **What made it work:**
-    - Authentic emotion over vocal acrobatics  
-    - Production that respected both R&B and Indian sensibilities  
-    - Confidence in using Hindi without apology  
-    
-    ### When Chai Met Toast
-    
-    This Kochi-based band blends indie folk and soul while moving fluidly between English, Hindi, and Malayalam—showing there is no single “correct” language for soul.
-    
-    ### Tejas
-    
-    A Bangalore-based artist bringing neo-soul vibes with Hindi lyrics. His falsetto runs and minimalist beats feel contemporary yet rooted.
-    
-    ## Why Vernacular Soul Works
-    
-    ### 1. Emotional Authenticity
-    Singing in a first language allows emotion to flow naturally, enriched by cultural memory and lived experience.
-    
-    ### 2. Rhythmic Compatibility
-    Indian languages adapt beautifully to soul and R&B grooves:
-    - Urdu poetry pairs naturally with neo-soul  
-    - Punjabi delivery matches classic soul energy  
-    - Tamil tonal flow complements vocal runs  
-    
-    ### 3. Cultural Pride
-    Vernacular expression is no longer a limitation—it’s a strength.
-    
-    ## Production Techniques
-    
-    Modern vernacular soul often features:
-    - Rhodes or Wurlitzer electric piano  
-    - 808 or live bass with subtle Indian rhythmic influence  
-    - Minimal drum patterns  
-    - Ambient pads and textures  
-    - Occasional Indian instrument layers  
-    
-    ## City Soundscapes
-    
-    **Mumbai:** Electronic leaning, Hindi–English blends  
-    **Bangalore:** Neo-soul, jazz influence, live instrumentation  
-    **Delhi:** Hip-hop–influenced R&B with heavier bass  
-    
-    ## Case Study: Prabh Deep
-    
-    Though primarily a hip-hop artist, Prabh Deep’s work shows how Punjabi flows naturally over soul-influenced production—proving vernacular does not mean non-mainstream.
-    
-    ## Challenges Faced
-    
-    1. **Algorithm bias** toward English content  
-    2. **Lack of genre terminology** (“Hindi R&B” is still undefined)  
-    3. **Limited production resources**
-    
-    Yet artists overcome this through community-building, online collaboration, and DIY production.
-    
-    ## The Future
-    
-    The vernacular indie soul movement is gaining momentum:
-    - Growing label interest  
-    - Dedicated playlists  
-    - Festival recognition  
-    - International collaborations  
-    
-    ## Conclusion
-    
-    Vernacular indie soul is more than a genre—it’s a statement. It proves that Indian artists don’t need to conform linguistically to create world-class soul music. By blending R&B’s emotional depth with native languages, they’re shaping a future that’s honest, intimate, and unapologetically their own.
-        `,
-        relatedBlogs: ['4', '3', '5']
+Something beautiful is happening in India's indie music scene. Young artists are taking the smooth, emotive sounds of R&B and soul and singing in Hindi, Tamil, Bengali, and Punjabi—creating a vernacular indie soul movement that feels deeply personal and authentic.
+
+## Breaking the English Barrier
+
+For years, Indian indie artists felt they needed to sing in English to be taken seriously. R&B and soul, rooted in African-American culture, seemed to demand English lyrics.
+
+Then came the shift.
+
+Artists realized that the emotional core of soul music—vulnerability, longing, celebration—translates powerfully into any language. Singing in one’s mother tongue often makes it even more expressive.
+
+## Pioneers of the Movement
+
+### Lifafa (Suryakant Sawhney)
+
+Lifafa’s use of Hindi over neo-soul production was groundbreaking. Tracks like "Nikamma" proved that Hindi could sound just as smooth over Rhodes keys and 808s.
+
+**What made it work:**
+- Authentic emotion over vocal acrobatics  
+- Production that respected both R&B and Indian sensibilities  
+- Confidence in using Hindi without apology  
+
+### When Chai Met Toast
+
+This Kochi-based band blends indie folk and soul while moving fluidly between English, Hindi, and Malayalam—showing there is no single “correct” language for soul.
+
+### Tejas
+
+A Bangalore-based artist bringing neo-soul vibes with Hindi lyrics. His falsetto runs and minimalist beats feel contemporary yet rooted.
+
+## Why Vernacular Soul Works
+
+### 1. Emotional Authenticity
+Singing in a first language allows emotion to flow naturally, enriched by cultural memory and lived experience.
+
+### 2. Rhythmic Compatibility
+Indian languages adapt beautifully to soul and R&B grooves:
+- Urdu poetry pairs naturally with neo-soul  
+- Punjabi delivery matches classic soul energy  
+- Tamil tonal flow complements vocal runs  
+
+### 3. Cultural Pride
+Vernacular expression is no longer a limitation—it’s a strength.
+
+## Production Techniques
+
+Modern vernacular soul often features:
+- Rhodes or Wurlitzer electric piano  
+- 808 or live bass with subtle Indian rhythmic influence  
+- Minimal drum patterns  
+- Ambient pads and textures  
+- Occasional Indian instrument layers  
+
+## City Soundscapes
+
+**Mumbai:** Electronic leaning, Hindi–English blends  
+**Bangalore:** Neo-soul, jazz influence, live instrumentation  
+**Delhi:** Hip-hop–influenced R&B with heavier bass  
+
+## Case Study: Prabh Deep
+
+Though primarily a hip-hop artist, Prabh Deep’s work shows how Punjabi flows naturally over soul-influenced production—proving vernacular does not mean non-mainstream.
+
+## Challenges Faced
+
+1. **Algorithm bias** toward English content  
+2. **Lack of genre terminology** (“Hindi R&B” is still undefined)  
+3. **Limited production resources**
+
+Yet artists overcome this through community-building, online collaboration, and DIY production.
+
+## The Future
+
+The vernacular indie soul movement is gaining momentum:
+- Growing label interest  
+- Dedicated playlists  
+- Festival recognition  
+- International collaborations  
+
+## Conclusion
+
+Vernacular indie soul is more than a genre—it’s a statement. It proves that Indian artists don’t need to conform linguistically to create world-class soul music. By blending R&B’s emotional depth with native languages, they’re shaping a future that’s honest, intimate, and unapologetically their own.
+    `,
+    relatedBlogs: ['4', '3', '5']
     }
 
 ]
