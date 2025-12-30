@@ -17,22 +17,25 @@ const Header = () => {
 
   return (
     <>
-      {/* Hamesha solid white background, glass effect ke sath */}
       <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 py-4">
         <nav className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between">
 
-            {/* Logo - Always Dark/Orange */}
-            <Link to="/" className="flex items-center gap-2 group outline-none">
-              <span className="text-2xl transform group-hover:rotate-12 transition-transform">
-                🎹
-              </span>
-              <span className="text-xl font-black tracking-tighter text-gray-900">
+            {/* Logo - Emoji replaced with Custom Music Icon */}
+            <Link to="/" className="flex items-center gap-3 group outline-none">
+              <div className="flex items-center gap-[2px]">
+                <span className="w-[3px] h-4 bg-gray-900 group-hover:bg-orange-500 group-hover:h-6 transition-all duration-300 rounded-full"></span>
+                <span className="w-[3px] h-6 bg-gray-900 group-hover:bg-orange-500 group-hover:h-4 transition-all duration-300 rounded-full"></span>
+                <span className="w-[3px] h-3 bg-gray-900 group-hover:bg-orange-500 group-hover:h-8 transition-all duration-300 rounded-full"></span>
+                <span className="w-[3px] h-7 bg-orange-500 group-hover:bg-gray-900 transition-all duration-300 rounded-full"></span>
+                <span className="w-[3px] h-4 bg-gray-900 group-hover:bg-orange-500 group-hover:h-6 transition-all duration-300 rounded-full"></span>
+              </div>
+              <span className="text-xl font-black tracking-tighter text-gray-900 uppercase">
                 Raga<span className="text-orange-500">Rhythm</span>
               </span>
             </Link>
 
-            {/* Desktop Nav - Always Gray/Orange */}
+            {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-10">
               {navLinks.map((link) => (
                 <Link
@@ -42,7 +45,6 @@ const Header = () => {
                     }`}
                 >
                   {link.name}
-                  {/* Underline Indicator */}
                   <span className={`absolute -bottom-1 left-0 h-[2px] bg-orange-500 transition-all duration-300 ${location.pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
                     }`} />
                 </Link>
@@ -71,7 +73,7 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* Mobile Menu - Solid White Slide Down */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-2xl animate-in slide-in-from-top-2 duration-300">
             <div className="px-8 py-10 flex flex-col gap-6">

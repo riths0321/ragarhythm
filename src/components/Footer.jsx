@@ -30,16 +30,21 @@ const Footer = () => {
             <div className="container mx-auto px-6 lg:px-12 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
 
-                    {/* 1. Brand Section */}
+                    {/* 1. Brand Section - Integrated Soundwave Logo */}
                     <div className="space-y-6">
-                        <Link to="/" className="flex items-center space-x-3 group" aria-label="RagaRhythm Home">
-                            <span className="text-3xl transition-transform group-hover:rotate-12 duration-300" aria-hidden="true">
-                                🎹
-                            </span>
-                            <span className="text-2xl font-black tracking-tighter text-white">
+                        <Link to="/" className="flex items-center gap-3 group outline-none" aria-label="RagaRhythm Home">
+                            <div className="flex items-center gap-[2px]">
+                                <span className="w-[3px] h-4 bg-white group-hover:bg-orange-500 group-hover:h-6 transition-all duration-300 rounded-full"></span>
+                                <span className="w-[3px] h-6 bg-white group-hover:bg-orange-500 group-hover:h-4 transition-all duration-300 rounded-full"></span>
+                                <span className="w-[3px] h-3 bg-white group-hover:bg-orange-500 group-hover:h-8 transition-all duration-300 rounded-full"></span>
+                                <span className="w-[3px] h-7 bg-orange-500 group-hover:bg-white transition-all duration-300 rounded-full"></span>
+                                <span className="w-[3px] h-4 bg-white group-hover:bg-orange-500 group-hover:h-6 transition-all duration-300 rounded-full"></span>
+                            </div>
+                            <span className="text-2xl font-black tracking-tighter text-white uppercase transition-colors">
                                 Raga<span className="text-orange-500">Rhythm</span>
                             </span>
                         </Link>
+
                         <p className="text-sm leading-relaxed max-w-xs">
                             Bridging the gap between timeless Indian Classical Ragas and the
                             modern beats of today. An odyssey through sound and soul.
@@ -68,7 +73,7 @@ const Footer = () => {
                         <ul className="space-y-4 text-sm font-medium">
                             {['Classical', 'Bollywood', 'Indie', 'Fusion'].map((cat) => (
                                 <li key={cat}>
-                                    <Link to={`/category/${cat.toLowerCase()}`} className="hover:text-white transition-colors flex items-center group">
+                                    <Link to={`/category/${cat.toLowerCase()}`} className="hover:text-white transition-colors flex items-center group text-gray-500">
                                         <span className="w-0 group-hover:w-4 h-[1px] bg-orange-500 transition-all mr-0 group-hover:mr-2" aria-hidden="true"></span>
                                         {cat} Music
                                     </Link>
@@ -77,7 +82,7 @@ const Footer = () => {
                         </ul>
                     </nav>
 
-                    {/* 3. Navigation (Privacy & Terms Integrated Here) */}
+                    {/* 3. Navigation */}
                     <nav aria-label="Footer Navigation">
                         <h3 className="text-white text-[10px] font-bold uppercase tracking-[0.25em] mb-8 opacity-70">Navigation</h3>
                         <ul className="space-y-4 text-sm font-medium">
@@ -85,7 +90,7 @@ const Footer = () => {
                                 <li key={item.label}>
                                     <Link
                                         to={item.path}
-                                        className="hover:text-white transition-colors flex items-center group"
+                                        className="hover:text-white transition-colors flex items-center group text-gray-500"
                                     >
                                         <span className="w-0 group-hover:w-4 h-[1px] bg-orange-500 transition-all mr-0 group-hover:mr-2" aria-hidden="true"></span>
                                         {item.label}
@@ -109,7 +114,7 @@ const Footer = () => {
                                     type="email"
                                     required
                                     placeholder="Email address"
-                                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:ring-1 focus:ring-orange-500 outline-none transition pl-10 placeholder:text-gray-700"
+                                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:ring-1 focus:ring-orange-500 outline-none transition pl-10 placeholder:text-gray-700 font-bold"
                                 />
                                 <Mail size={14} className="absolute left-3 top-4 text-gray-600" aria-hidden="true" />
                             </div>

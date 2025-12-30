@@ -7,7 +7,7 @@ const Hero = () => {
       {/* 1. THE IMMERSIVE BACKGROUND */}
       <div className="absolute inset-0">
         <img
-          src="https://images.squarespace-cdn.com/content/v1/5b788d28697a98e17a6d4c7a/1553556014271-4O6ANIFF8EL9VCVXE6JO/image3.png"
+          src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg"
           alt="Classical Music Background"
           className="w-full h-full object-cover opacity-80 scale-105 animate-subtle-zoom"
         />

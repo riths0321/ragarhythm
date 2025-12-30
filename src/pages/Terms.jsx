@@ -1,125 +1,125 @@
 import React from "react";
 import SEO from "../components/SEO";
+import { motion } from "framer-motion";
+import { Scale, ShieldAlert, FileText, Globe } from "lucide-react";
 
 const Terms = () => {
     return (
-        <main className="min-h-screen bg-white text-gray-900 pt-32 pb-24">
+        <main className="min-h-screen bg-[#fafafa] text-gray-900 pt-40 pb-24 selection:bg-orange-100">
             <SEO
                 title="Terms & Conditions | RagaRhythm"
-                description="Read the terms and conditions governing the use of the RagaRhythm music blog."
+                description="Read the legal terms governing the RagaRhythm music ecosystem."
             />
 
-            <div className="max-w-4xl mx-auto px-6">
-                {/* ================= HEADER ================= */}
-                <header className="mb-20">
-                    <span className="inline-block px-4 py-1 bg-orange-100 text-orange-700 text-xs font-black uppercase tracking-widest rounded-full mb-6">
-                        Legal Information
-                    </span>
+            <div className="max-w-6xl mx-auto px-6 lg:px-12">
+                {/* ================= HERO HEADER ================= */}
+                <header className="max-w-3xl mb-32">
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="flex items-center gap-3 mb-8"
+                    >
+                        <Scale className="text-orange-600" size={20} />
+                        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600">Standard Protocol v2.1</span>
+                    </motion.div>
 
-                    <h1 className="text-5xl md:text-6xl font-black tracking-tighter mb-6">
-                        Terms <span className="text-orange-600">&</span> Conditions
-                    </h1>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.85] mb-10 uppercase"
+                    >
+                        Terms of <br />
+                        <span className="font-serif italic font-light text-gray-400 lowercase">Service.</span>
+                    </motion.h1>
 
-                    <p className="text-gray-500 text-lg font-medium">
-                        Effective Date: <strong>December 20, 2025</strong>
-                    </p>
+                    <div className="flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+                        <p>Last Revised: <span className="text-gray-900">Dec 30, 2025</span></p>
+                        <div className="h-4 w-[1px] bg-gray-300" />
+                        <p>Jurisdiction: <span className="text-gray-900">Global</span></p>
+                    </div>
                 </header>
 
-                {/* ================= CONTENT ================= */}
-                <div className="space-y-16">
-                    {/* Section 1 */}
-                    <section className="border-l-4 border-orange-600 pl-8">
-                        <h2 className="text-2xl font-black mb-4 uppercase tracking-tight">
-                            1. Acceptance of Terms
-                        </h2>
-                        <p className="text-gray-600 text-lg leading-relaxed">
-                            By accessing or using RagaRhythm, you agree to be bound by these
-                            Terms and Conditions. If you do not agree with any part of these
-                            terms, please discontinue use of the platform.
-                        </p>
-                    </section>
-
-                    {/* Section 2 */}
-                    <section className="border-l-4 border-orange-600 pl-8">
-                        <h2 className="text-2xl font-black mb-4 uppercase tracking-tight">
-                            2. Use of Content
-                        </h2>
-                        <p className="text-gray-600 text-lg leading-relaxed">
-                            All articles, musical analysis, visuals, and original content
-                            published on RagaRhythm are intended for personal and
-                            non-commercial use only. Republishing, reproducing, or modifying
-                            content without proper attribution or permission is prohibited.
-                        </p>
-                    </section>
-
-                    {/* Section 3 */}
-                    <section className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
-                            <h3 className="font-black text-xl mb-3 text-gray-900">
-                                Intellectual Property
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                All trademarks, logos, and creative materials remain the
-                                intellectual property of RagaRhythm or respective contributors.
-                                Unauthorized use may result in legal action.
-                            </p>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+                    {/* ================= LEFT SIDE NAVIGATION (Sticky) ================= */}
+                    <aside className="hidden lg:block lg:col-span-4 sticky top-40 h-fit">
+                        <div className="space-y-8 border-l-2 border-gray-100 pl-8">
+                            {['Agreement', 'Copyright', 'Conduct', 'Liability'].map((item, idx) => (
+                                <div key={item} className="group cursor-pointer">
+                                    <p className="text-[10px] font-black text-gray-300 uppercase mb-1">Article 0{idx + 1}</p>
+                                    <p className="text-sm font-bold text-gray-500 group-hover:text-orange-600 transition-colors uppercase tracking-widest">{item}</p>
+                                </div>
+                            ))}
                         </div>
+                    </aside>
 
-                        <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
-                            <h3 className="font-black text-xl mb-3 text-gray-900">
-                                User Contributions
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Comments and user-submitted content must remain respectful and
-                                constructive. We reserve the right to remove content that is
-                                abusive, misleading, or violates community standards.
+                    {/* ================= MAIN CONTENT ================= */}
+                    <div className="lg:col-span-8 space-y-24">
+
+                        {/* Section 1 */}
+                        <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+                            <div className="flex items-center gap-4 mb-6">
+                                <span className="text-4xl font-serif italic text-orange-200">01</span>
+                                <h2 className="text-3xl font-black uppercase tracking-tight">Acceptance of Terms</h2>
+                            </div>
+                            <div className="prose prose-orange text-gray-600 text-lg leading-relaxed space-y-4">
+                                <p>By engaging with <strong>RagaRhythm</strong>, you enter into a binding digital agreement. We provide a curated lens into music theory and fusion; your use of this platform constitutes full acceptance of our operational governance.</p>
+                                <p className="bg-orange-50 p-6 rounded-2xl text-sm border-l-4 border-orange-500 italic">
+                                    "Our beats are shared, but our terms are non-negotiable for maintaining community integrity."
+                                </p>
+                            </div>
+                        </motion.section>
+
+                        {/* Section 2 - Creative Grid */}
+                        <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+                            <div className="flex items-center gap-4 mb-8">
+                                <span className="text-4xl font-serif italic text-orange-200">02</span>
+                                <h2 className="text-3xl font-black uppercase tracking-tight">Intellectual Property</h2>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-orange-900/5 transition-all">
+                                    <FileText className="text-orange-600 mb-4" size={24} />
+                                    <h4 className="font-bold text-gray-900 mb-2 uppercase text-xs tracking-widest">Original Analysis</h4>
+                                    <p className="text-sm text-gray-500 leading-relaxed font-medium">Our Raga breakdowns and deep-dives are exclusive intellectual assets. Mirroring or scraping content is strictly prohibited.</p>
+                                </div>
+                                <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-orange-900/5 transition-all">
+                                    <Globe className="text-orange-600 mb-4" size={24} />
+                                    <h4 className="font-bold text-gray-900 mb-2 uppercase text-xs tracking-widest">Public Domain</h4>
+                                    <p className="text-sm text-gray-500 leading-relaxed font-medium">While the Ragas are timeless, our specific interpretation, UI, and code are protected under digital copyright laws.</p>
+                                </div>
+                            </div>
+                        </motion.section>
+
+                        {/* Section 3 - Highlight Box */}
+                        <motion.section
+                            initial={{ scale: 0.95, opacity: 0 }}
+                            whileInView={{ scale: 1, opacity: 1 }}
+                            className="bg-gray-900 text-white p-12 rounded-[3rem] relative overflow-hidden group"
+                        >
+                            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:rotate-12 transition-transform">
+                                <ShieldAlert size={120} />
+                            </div>
+                            <div className="relative z-10">
+                                <span className="text-orange-500 text-[10px] font-black uppercase tracking-[.3em] mb-4 block">Critical Clause</span>
+                                <h2 className="text-4xl font-black mb-6 tracking-tighter uppercase leading-none">Limitation of <br />Liability</h2>
+                                <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
+                                    RagaRhythm is an educational and cultural platform. We provide content "as-is". We are not liable for any rhythmic disruptions, technical glitches, or external link inaccuracies. Use the soul of the site at your own discretion.
+                                </p>
+                            </div>
+                        </motion.section>
+
+                        {/* Section 4 - Simple & Clean */}
+                        <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+                            <div className="flex items-center gap-4 mb-6">
+                                <span className="text-4xl font-serif italic text-orange-200">03</span>
+                                <h2 className="text-3xl font-black uppercase tracking-tight">Governance Updates</h2>
+                            </div>
+                            <p className="text-gray-600 text-lg leading-relaxed">
+                                The digital landscape evolves faster than a teen-taal cycle. We reserve the right to update these terms. Your continued presence on the site post-update confirms your alignment with our new rhythm.
                             </p>
-                        </div>
-                    </section>
+                        </motion.section>
 
-                    {/* Section 4 */}
-                    <section className="border-l-4 border-orange-600 pl-8">
-                        <h2 className="text-2xl font-black mb-4 uppercase tracking-tight">
-                            4. User Conduct
-                        </h2>
-                        <p className="text-gray-600 text-lg leading-relaxed">
-                            Users are expected to engage respectfully within the community.
-                            Any form of harassment, spamming, hate speech, or misuse of the
-                            platform may result in restricted access or permanent removal.
-                        </p>
-                    </section>
-
-                    {/* Highlighted Section */}
-                    <section className="bg-gray-900 text-white p-10 md:p-14 rounded-[2.5rem] shadow-2xl shadow-orange-200">
-                        <h2 className="text-2xl font-black mb-4 tracking-tight">
-                            Limitation of Liability
-                        </h2>
-                        <p className="text-gray-400 leading-relaxed text-lg">
-                            RagaRhythm is provided “as is” without warranties of any kind. We
-                            are not responsible for any direct or indirect damages resulting
-                            from the use or inability to use the platform.
-                        </p>
-                    </section>
-
-                    {/* Section 5 */}
-                    <section className="border-l-4 border-orange-600 pl-8">
-                        <h2 className="text-2xl font-black mb-4 uppercase tracking-tight">
-                            5. Changes to Terms
-                        </h2>
-                        <p className="text-gray-600 text-lg leading-relaxed">
-                            We may revise these Terms & Conditions at any time. Continued use
-                            of the platform after updates signifies acceptance of the revised
-                            terms. The latest version will always be available on this page.
-                        </p>
-                    </section>
-
-                    {/* Contact */}
-                    <section className="text-center pt-12">
-                        <p className="text-gray-500 text-lg">
-                            Questions regarding these terms? Please visit our{" "}
-                            <span className="font-bold text-orange-600">Contact</span> page.
-                        </p>
-                    </section>
+                    </div>
                 </div>
             </div>
         </main>
