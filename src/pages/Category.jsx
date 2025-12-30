@@ -7,10 +7,17 @@ import { MOCK_BLOGS } from "../data/mockBlogs";
 import { motion } from "framer-motion";
 
 const categoryInfo = {
+
+    All: {
+        icon: "🌍",
+        accent: "from-gray-900 to-gray-600",
+        image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2000",
+        description: "Explore the complete rhythm—from classical soul to modern fusion.",
+    },
     Classical: {
         icon: "🎼",
         accent: "from-orange-600 to-orange-400",
-        image: "https://images.unsplash.com/photo-1599313291070-49272332617f?q=80&w=2000",
+        image: "https://images.pexels.com/photos/13614132/pexels-photo-13614132.jpeg?q=80&w=2000",
         description: "Experience the soul of India through its timeless ragas and orchestral traditions.",
     },
     Bollywood: {
@@ -28,7 +35,7 @@ const categoryInfo = {
     Fusion: {
         icon: "🎭",
         accent: "from-green-600 to-green-400",
-        image: "https://images.unsplash.com/photo-1514525253361-bee8718a7439?q=80&w=2000",
+        image: "https://images.pexels.com/photos/7714048/pexels-photo-7714048.jpeg?q=80&w=2000",
         description: "Where East meets West—breaking genre boundaries to create something new.",
     },
 };
@@ -38,28 +45,35 @@ const Category = () => {
 
     const filteredBlogs = useMemo(() => {
         if (!category) return [];
+
+        // Agar category "all" hai, to poora MOCK_BLOGS return karo
+        if (category.toLowerCase() === "all") {
+            return MOCK_BLOGS;
+        }
+
+        // Varna filter karo normal category ke liye
         return MOCK_BLOGS.filter(
             (blog) => blog.category?.toLowerCase() === category.toLowerCase()
         );
     }, [category]);
 
-    const info = categoryInfo[category] || {
-        icon: "🎵",
-        accent: "from-orange-600 to-orange-400",
-        image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2000",
-        description: "Explore our latest music articles and deep-dives.",
-    };
+    // Info nikalne ke liye case-insensitive check
+    const currentCategoryKey = Object.keys(categoryInfo).find(
+        key => key.toLowerCase() === category?.toLowerCase()
+    ) || "All";
+
+    const info = categoryInfo[currentCategoryKey];
 
     return (
         <main className="bg-white min-h-screen">
-            <SEO title={`${category} Hub — RagaRhythm`} description={info.description} />
+            <SEO title={`${currentCategoryKey} Hub — RagaRhythm`} description={info.description} />
 
-            {/* HERO SECTION - Responsive Height */}
+            {/* HERO SECTION */}
             <header className="relative h-[50vh] md:h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gray-950">
                 <div className="absolute inset-0">
                     <img
                         src={info.image}
-                        alt={category}
+                        alt={currentCategoryKey}
                         className="w-full h-full object-cover opacity-40 scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-gray-950/50" />
@@ -72,7 +86,7 @@ const Category = () => {
                         className="inline-block mb-4 md:mb-6 px-4 py-1.5 md:px-6 md:py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl"
                     >
                         <span className="text-[9px] md:text-[10px] font-black text-white uppercase tracking-[0.3em] md:tracking-[0.4em]">
-                            Curated Collection
+                            {currentCategoryKey === "All" ? "The Full Library" : "Curated Collection"}
                         </span>
                     </motion.div>
 
@@ -81,7 +95,7 @@ const Category = () => {
                         animate={{ scale: 1, opacity: 1 }}
                         className="text-6xl md:text-9xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase leading-none"
                     >
-                        {category}<span className={`bg-gradient-to-r ${info.accent} bg-clip-text text-transparent`}>.</span>
+                        {currentCategoryKey}<span className={`bg-gradient-to-r ${info.accent} bg-clip-text text-transparent`}>.</span>
                     </motion.h1>
 
                     <motion.p
@@ -98,25 +112,21 @@ const Category = () => {
             {/* CONTENT SECTION */}
             <section className="relative -mt-12 md:-mt-20 z-20 bg-white rounded-t-[3rem] md:rounded-t-[4rem] px-4 md:px-12 py-12 md:py-20 shadow-2xl">
                 <div className="container mx-auto">
-
-                    {/* FIXED CATEGORY NAV: Scrollable on mobile, Centered on Desktop */}
                     <div className="w-full mb-16 md:mb-24 overflow-x-auto scrollbar-hide">
                         <div className="flex justify-start md:justify-center min-w-max md:min-w-0 px-4">
                             <CategoryFilter activeCategory={category} />
                         </div>
                     </div>
 
-                    {/* Results Header: Responsive Flex */}
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 md:mb-12 pb-6 border-b border-gray-100 gap-4">
                         <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tighter uppercase">
-                            Archive <span className="text-orange-600">/</span> {category}
+                            Archive <span className="text-orange-600">/</span> {currentCategoryKey}
                         </h2>
                         <span className="self-start md:self-center text-[10px] font-black bg-gray-900 text-white px-4 py-2 rounded-full uppercase tracking-widest">
                             {filteredBlogs.length} Stories
                         </span>
                     </div>
 
-                    {/* Blog Grid */}
                     {filteredBlogs.length > 0 ? (
                         <div className="pb-10 md:pb-20">
                             <BlogGrid blogs={filteredBlogs} />
@@ -128,7 +138,7 @@ const Category = () => {
                             </div>
                             <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase mb-4 tracking-tight">The strings are silent...</h3>
                             <p className="text-gray-400 font-bold max-w-sm mx-auto uppercase text-[9px] md:text-[10px] tracking-widest">
-                                Check back soon for the latest {category} stories.
+                                Check back soon for the latest {currentCategoryKey} stories.
                             </p>
                         </div>
                     )}

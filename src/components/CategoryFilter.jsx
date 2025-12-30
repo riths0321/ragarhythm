@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CategoryFilter = ({ activeCategory }) => {
     // Static Categories array - matches your Category.jsx info
     const categories = [
-        { name: 'All', path: '/', icon: '🎵' },
+        { name: 'All', path: '/category/All', icon: '🎵' },
         { name: 'Classical', path: '/category/Classical', icon: '🎼' },
         { name: 'Bollywood', path: '/category/Bollywood', icon: '🎬' },
         { name: 'Indie', path: '/category/Indie', icon: '🎸' },

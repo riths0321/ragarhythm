@@ -43,7 +43,7 @@ const Home = () => {
                         <p className="text-orange-600 font-black text-[10px] uppercase tracking-[0.3em] mb-2">Curated Hits</p>
                         <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter uppercase">Featured <span className="text-orange-600">Rhythm</span></h2>
                     </div>
-                    <Link to="/archive" className="hidden md:flex text-gray-900 font-black text-xs uppercase tracking-widest items-center gap-2 group border-b-2 border-gray-900 pb-1">
+                    <Link to="/category/all" className="hidden md:flex text-gray-900 font-black text-xs uppercase tracking-widest items-center gap-2 group border-b-2 border-gray-900 pb-1">
                         Explore Full Archive <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
